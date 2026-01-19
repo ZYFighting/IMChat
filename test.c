@@ -7,5 +7,6 @@ int main()
 		a += i;
 	}
 	printf("%d\n", a);
+	printf("aaaaaaa");
 	return 0;
 }
