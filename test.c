@@ -9,5 +9,6 @@ int main()
 	printf("%d\n", a);
 	printf("aaaaaaa");
 	printf("测试");
+	printf("zhang");
 	return 0;
 }
