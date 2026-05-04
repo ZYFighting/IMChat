@@ -8,6 +8,12 @@
 #define _DEF_UDP_PORT                      (12345)
 //TCP协议端口号
 #define _DEF_TCP_PORT                      (56789)
+//心跳包标识
+#define HEARTBEAT_PACKET                   "HEARTBEAT"
+#define HEARTBEAT_RESP                     "HEARTBEAT_RESP"
+// 心跳配置
+#define HEARTBEAT_INTERVAL                 (3000)
+#define HEARTBEAT_TIMEOUT                  (10000)
 //TCP协议监听队列的最大长度
 #define _DEF_TCP_LISTEN_MAX                (100)
 //昵称、手机号、密码的最大长度
@@ -73,6 +79,7 @@
 #define _def_status_online                 (3)
 #define _def_status_offline                (4)
 
+
 //声明结构体类型变量
 typedef int packtype;
 //请求结构体
@@ -90,6 +97,7 @@ typedef struct _STRU_REGISTER_RQ
     char password[_DEF_MAX_LENGTH];
     char name[_DEF_MAX_LENGTH];
 }_STRU_REGISTER_RQ;
+
 //注册回复：结果（成功，电话号码已被注册，昵称已被注册）
 typedef struct _STRU_REGISTER_RS
 {
@@ -98,6 +106,7 @@ typedef struct _STRU_REGISTER_RS
     packtype type;
     int result;
 }_STRU_REGISTER_RS;
+
 //登录请求
 typedef struct _STRU_LOGIN_RQ
 {
@@ -110,6 +119,7 @@ typedef struct _STRU_LOGIN_RQ
     char tel[_DEF_MAX_LENGTH];
     char password[_DEF_MAX_LENGTH];
 }_STRU_LOGIN_RQ;
+
 //登录回复:结果（登录成功，电话号码不存在，密码错误）
 typedef struct _STRU_LOGIN_RS
 {
@@ -119,6 +129,7 @@ typedef struct _STRU_LOGIN_RS
     int result;
     int userId;
 }_STRU_LOGIN_RS;
+
 //添加好友请求:好友昵称，自己的id，自己的昵称
 typedef struct _STRU_ADD_FRIEND_RQ
 {
@@ -134,6 +145,7 @@ typedef struct _STRU_ADD_FRIEND_RQ
     char friendTel[_DEF_MAX_LENGTH];
     char friendName[_DEF_MAX_LENGTH];
 }_STRU_ADD_FRIEND_RQ;
+
 //添加好友回复：结果（添加成功，好友不存在，好友拒绝，好友不在线）,自己的ID，自己的昵称，好友的ID
 typedef struct _STRU_ADD_FRIEND_RS
 {
@@ -151,6 +163,7 @@ typedef struct _STRU_ADD_FRIEND_RS
     char friendName[_DEF_MAX_LENGTH];
     char friendTel[_DEF_MAX_LENGTH];
 }_STRU_ADD_FRIEND_RS;
+
 //聊天请求:聊天内容，自己的ID，好友的ID
 typedef struct _STRU_CHAT_RQ
 {
@@ -164,6 +177,7 @@ typedef struct _STRU_CHAT_RQ
     int userId;
     int friendId;
 }_STRU_CHAT_RQ;
+
 //聊天回复：结果（成功，失败）
 typedef struct _STRU_CHAT_RS
 {
@@ -173,6 +187,7 @@ typedef struct _STRU_CHAT_RS
     int friendId;
     int result;
 }_STRU_CHAT_RS;
+
 //下线请求:自己的Id
 typedef struct _STRU_OFFLINE_RQ
 {
@@ -181,6 +196,7 @@ typedef struct _STRU_OFFLINE_RQ
     packtype type;
     int userId;
 }_STRU_OFFLINE_RQ;
+
 //用户信息：type,id，昵称，签名，头像id，状态
 typedef struct _STRU_FRIEND_INFO
 {

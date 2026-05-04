@@ -6,7 +6,6 @@
 #include<process.h>
 
 using namespace std;
-//#pragma comment(lib,"Ws2_32.lib")
 
 class INetMediator;//避免头文件相互包含
 class INet

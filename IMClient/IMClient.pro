@@ -11,6 +11,7 @@ CONFIG += c++11
 LIBS += -lWs2_32
 
 SOURCES += \
+    Net/ClientHeartbeat.cpp \
     Net/TcpClient.cpp \
     Net/TcpServer.cpp \
     Net/Udp.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
     mediator/UdpMediator.cpp
 
 HEADERS += \
+    Net/ClientHeartbeat.h \
     Net/INet.h \
     Net/TcpClient.h \
     Net/TcpServer.h \

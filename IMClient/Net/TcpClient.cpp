@@ -1,4 +1,4 @@
-#include"TcpClient.h"
+﻿#include"TcpClient.h"
 #include"../mediator/TcpClientMediator.h"
 
 TcpClient::TcpClient(INetMediator* p):m_handle(nullptr) {
@@ -108,6 +108,11 @@ void TcpClient::recvData() {
 		nRecvNum = recv(m_sock, (char*)&nPackLen, sizeof(int), 0);
 		if (nRecvNum > 0)
 		{
+            if (nPackLen <= 0 || nPackLen > 1024 * 1024)
+            {
+                std::cout << "invalid pack length: " << nPackLen << std::endl;
+                break;  // 关闭连接
+            }
 			//接受包长度之后，再接受数据
 			//按照包长度new一个空间
 			char* packBuf = new char[nPackLen];
