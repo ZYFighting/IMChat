@@ -1,0 +1,20 @@
+﻿  CKernel.cpp
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\CKernel.cpp(224,83): warning C4244: “参数”: 从“unsigned __int64”转换到“unsigned long”，可能丢失数据
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\CKernel.cpp(255,88): warning C4244: “参数”: 从“unsigned __int64”转换到“unsigned long”，可能丢失数据
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\CKernel.cpp(266,86): warning C4244: “参数”: 从“unsigned __int64”转换到“unsigned long”，可能丢失数据
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\CKernel.cpp(325,64): warning C4244: “参数”: 从“unsigned __int64”转换到“unsigned long”，可能丢失数据
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\CKernel.cpp(362,61): warning C4244: “参数”: 从“unsigned __int64”转换到“unsigned long”，可能丢失数据
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\CKernel.cpp(408,61): warning C4244: “参数”: 从“unsigned __int64”转换到“unsigned long”，可能丢失数据
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\CKernel.cpp(452,62): warning C4244: “参数”: 从“unsigned __int64”转换到“unsigned long”，可能丢失数据
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\CKernel.cpp(486,60): warning C4244: “参数”: 从“unsigned __int64”转换到“unsigned long”，可能丢失数据
+  IMServer.cpp
+  TcpClient.cpp
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\Net\TcpClient.cpp(130,48): warning C4244: “参数”: 从“SOCKET”转换到“unsigned long”，可能丢失数据
+  TcpServer.cpp
+D:\知识体系\网络知识体系\network_IMServer\network_IMServer\network_IMServer\Net\TcpServer.cpp(194,48): warning C4244: “参数”: 从“SOCKET”转换到“unsigned long”，可能丢失数据
+  Udp.cpp
+  TcpClientMediator.cpp
+  TcpServerMediator.cpp
+  UdpMediator.cpp
+  正在生成代码...
+  network_IMServer.vcxproj -> D:\知识体系\网络知识体系\network_IMServer\network_IMServer\x64\Debug\network_IMServer.exe
